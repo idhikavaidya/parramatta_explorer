@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en-AU" data-root="./" data-theme="light" data-cb="none" data-text="base" data-motion="auto" data-font="default" data-ls="normal" data-lh="normal">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Offline · Parramatta Explorer</title>
+<meta name="description" content="You are offline.">
+<meta name="theme-color" content="#034f84">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./assets/img/icon.svg" type="image/svg+xml">
+<link rel="icon" href="./favicon.ico" sizes="any">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var k={theme:'pe-theme',cb:'pe-cb',text:'pe-text',motion:'pe-motion',font:'pe-font',ls:'pe-ls',lh:'pe-lh'},f={theme:'light',cb:'none',text:'base',motion:'auto',font:'default',ls:'normal',lh:'normal'};for(var n in k){d.setAttribute('data-'+n,localStorage.getItem(k[n])||f[n]);}}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="net-banner" class="net-banner" role="status" hidden>You're offline. Pages you've already opened, and the offline schematic map, still work.</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./index.html">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="#92a8d1" stroke-width="1.6"/><path d="M16 8l-2.4 5.6L8 16l2.4-5.6z" fill="#FFC93C"/></svg>
+      <span>Parramatta Explorer</span>
+    </a>
+    <div class="header-actions">
+      <nav class="site-nav" aria-label="Primary"><ul><li><a href="./index.html">Explore</a></li><li><a href="./guide.html">How to use</a></li><li><a href="./report.html">Report a problem</a></li><li><a href="./about.html">About &amp; data</a></li><li><a href="./settings.html">Settings</a></li></ul></nav>
+      <button type="button" class="speak" hidden aria-pressed="false" data-label="Read page"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Read page</span></button>
+      <a class="btn btn-sun btn-small" href="./signin.html">Sign in</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container">
+
+<div class="stack" style="max-width:40rem">
+  <h1>You're offline</h1>
+  <p class="muted">This page hasn't been saved on your device yet. Pages you have already opened still work without a signal.</p>
+  <p><a class="btn btn-primary" href="index.html">Go to the home page</a></p>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div aria-hidden="true" class="bunting "><span class="b-accent"></span><span class="b-sun"></span><span class="b-mint"></span><span class="b-lav"></span><span class="b-sky"></span><span class="b-brand"></span></div>
+  <div class="container footer-grid">
+    <div class="stack-sm">
+      <p style="font-family:var(--font-display);font-weight:700;font-size:1rem">Parramatta Explorer</p>
+      <p>A student prototype for the Build with AI Challenge. Independent — not affiliated with or endorsed by the City of Parramatta.</p>
+      <p>In an emergency call <strong>000</strong>.</p>
+    </div>
+    <div class="stack-sm">
+      <p>We acknowledge the Baramadagal clan of the Dharug Nation, the Traditional Owners of the land and waters of Parramatta, and pay respect to Elders past and present.</p>
+      <p>Event details are drawn from public City of Parramatta information and must be confirmed with the organiser. See <a class="link" href="./about.html">About &amp; data</a>.</p>
+    </div>
+  </div>
+</footer>
+<script src="./assets/js/data.js"></script>
+<script src="./assets/js/render.js"></script>
+<script src="./assets/js/core.js"></script>
+</body>
+</html>

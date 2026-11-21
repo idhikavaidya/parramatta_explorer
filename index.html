@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en-AU" data-root="./" data-theme="light" data-cb="none" data-text="base" data-motion="auto" data-font="default" data-ls="normal" data-lh="normal">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parramatta Explorer</title>
+<meta name="description" content="Find what&#39;s on across Parramatta and plan an event that works for everyone. Accessible, offline-ready event information for the community.">
+<meta name="theme-color" content="#034f84">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./assets/img/icon.svg" type="image/svg+xml">
+<link rel="icon" href="./favicon.ico" sizes="any">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var k={theme:'pe-theme',cb:'pe-cb',text:'pe-text',motion:'pe-motion',font:'pe-font',ls:'pe-ls',lh:'pe-lh'},f={theme:'light',cb:'none',text:'base',motion:'auto',font:'default',ls:'normal',lh:'normal'};for(var n in k){d.setAttribute('data-'+n,localStorage.getItem(k[n])||f[n]);}}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="net-banner" class="net-banner" role="status" hidden>You're offline. Pages you've already opened, and the offline schematic map, still work.</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./index.html">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="#92a8d1" stroke-width="1.6"/><path d="M16 8l-2.4 5.6L8 16l2.4-5.6z" fill="#FFC93C"/></svg>
+      <span>Parramatta Explorer</span>
+    </a>
+    <div class="header-actions">
+      <nav class="site-nav" aria-label="Primary"><ul><li><a href="./index.html" aria-current="page">Explore</a></li><li><a href="./guide.html">How to use</a></li><li><a href="./report.html">Report a problem</a></li><li><a href="./about.html">About &amp; data</a></li><li><a href="./settings.html">Settings</a></li></ul></nav>
+      <button type="button" class="speak" hidden aria-pressed="false" data-label="Read page"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Read page</span></button>
+      <a class="btn btn-sun btn-small" href="./signin.html">Sign in</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container">
+
+<div class="stack-lg">
+  <section class="hero">
+    <div aria-hidden="true" class="bunting hero-bunting"><span class="b-accent"></span><span class="b-sun"></span><span class="b-mint"></span><span class="b-lav"></span><span class="b-sky"></span></div>
+    <div class="hero-body">
+      <div class="hero-copy">
+        <p class="eyebrow">Events across Parramatta</p>
+        <h1>Find <mark>what's on</mark> in Parramatta.</h1>
+        <p class="lead">Festivals, markets, gigs and free community events — with an accessible access plan for each one, so you can plan before you leave home.</p>
+        <div class="row" style="padding-top:0.25rem">
+          <a class="btn btn-sun" href="guide.html">How to use the app</a>
+          <a class="btn btn-ghost-light" href="signin.html">Sign in</a>
+        </div>
+      </div>
+      <span style="color:#fff"><button type="button" class="speak" hidden aria-pressed="false" data-label="Listen to this page"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Listen to this page</span></button></span>
+    </div>
+  </section>
+
+  <section class="stack" aria-labelledby="explore-h">
+    <div class="row between" style="align-items:flex-end">
+      <div class="stack-sm">
+        <h2 id="explore-h" style="font-size:1.875rem">Search what's on</h2>
+        <p class="muted">Real events across Parramatta. Filter, then open an event to see its access plan.</p>
+      </div>
+      <button type="button" class="speak" hidden aria-pressed="false" data-label="Listen to this section" data-speak="Search what&#39;s on. Real events across Parramatta. Use the search box and the category buttons to narrow the list. Each result links to that event&#39;s access plan."><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Listen to this section</span></button>
+    </div>
+    <div class="searchbar js-only">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <label class="sr-only" for="q">Search events</label>
+      <input id="q" type="search" placeholder="Search events, e.g. market, music, kids" autocomplete="off">
+      <button type="button" id="clear-search" class="btn btn-primary btn-small">Clear</button>
+    </div>
+    <div id="chips" class="chips js-only" role="group" aria-label="Filter by category"></div>
+    <div class="price-filter js-only">
+      <label for="price-max"><strong>Maximum price:</strong> <output id="price-out" for="price-max">Any price</output></label>
+      <input id="price-max" type="range" min="0" max="12" step="1" value="12" aria-describedby="price-help">
+      <span id="price-help" class="muted small">Drag to the left for free events only.</span>
+    </div>
+    <div class="row between js-only" style="align-items:center">
+      <p id="result-count" aria-live="polite" class="semibold">Showing 15 of 15 events</p>
+      <div class="view-switch" id="view-switch" role="group" aria-label="Choose how to view events">
+        <button type="button" data-view="list" aria-pressed="true">☰ List</button>
+        <button type="button" data-view="map" aria-pressed="false">📍 Map</button>
+        <button type="button" data-view="calendar" aria-pressed="false">📅 Calendar</button>
+      </div>
+    </div>
+    <div id="events-map-wrap" hidden>
+      <div id="events-map" class="map-canvas events-map" aria-label="Map of event locations. The list below has the same events."></div>
+      <p class="muted small" id="events-map-note">Map data © OpenStreetMap contributors. Event positions are approximate; open an event for details. Where several events share a spot, they are grouped.</p>
+    </div>
+    <div id="events-calendar" hidden></div>
+    <ul id="event-grid" class="grid-cards">
+<li><a class="event-card" href="./plan/parramatta-lanes.html"><div class="event-card-top" style="background:#cfc2f7"><span class="tag">Free / Music</span><span class="price">Free</span></div><div class="event-card-body"><h3><span class="ev-emoji" aria-hidden="true">🎶</span> Parramatta Lanes</h3><p class="muted small">October</p><p class="muted small">Laneway takeovers, music stages, art installations and a long line-up of performers.</p><span class="cta">Event details · Access plan · Booking <span aria-hidden="true">→</span></span></div></a></li>
+<li><a class="event-card" href="./plan/diwali.html"><div class="event-card-top" style="background:#ffc93c"><span class="tag">Free / Culture</span><span class="price">Free</span></div><div class="event-card-body"><h3><span class="ev-emoji" aria-hidden="true">🪔</span> Diwali</h3><p class="muted small">October / November</p><p class="muted small">One of the city&#39;s major annual celebrations, with lights, food and performances.</p><span class="cta">Event details · Access plan · Booking <span aria-hidden="true">→</span></span></div></a></li>
+<li><a class="event-card" href="./plan/christmas-in-parramatta.html"><div class="event-card-top" style="background:#8fe3c2"><span class="tag">Free / Family</span><span class="price">Free</span></div><div class="event-card-body"><h3><span class="ev-emoji" aria-hidden="true">🎄</span> Christmas in Parramatta</h3><p class="muted small">From late November</p><p class="muted small">Festive lights, markets, live music and community gatherings across the city.</p><span class="cta">Event details · Access plan · Booking <span aria-hidden="true">→</span></span></div></a></li>
+<li><a class="event-card" href="./plan/new-years-eve.html"><div class="event-card-top" style="background:#034f84"><span class="tag">Free / Music</span><span class="price">Free</span></div><div class="event-card-body"><h3><span class="ev-emoji" aria-hidden="true">🎆</span> New Year&#39;s Eve</h3><p class="muted small">31 December</p><p class="muted small">A family-friendly way to see out the year in Parramatta, with entertainment and fireworks.</p><span class="cta">Event details · Access plan · Booking <span aria-hidden="true">→</span></span></div></a></li>
+<li><a class="event-card" href="./plan/lunar-new-year.html"><div class="event-card-top" style="background:#c94c4c"><span class="tag">Free / Culture</span><span class="price">Free</span></div><div class="event-card-body"><h3><span class="ev-emoji" aria-hidden="true">🧧</span> Lunar New Year</h3><p class="muted small">January / February</p><p class="muted small">A family-friendly festival welcoming the new lunar year with food, dance and colour.</p><span class="cta">Event details · Access plan · Booking <span aria-hidden="true">→</span></span></div></a></li>
+<li><a class="event-card" href="./plan/australia-day.html"><div class="event-card-top" style="background:#ffc93c"><span class="tag">Free / Family</span><span class="price">Free</span></div><div class="event-card-body"><h3><span class="ev-emoji" aria-hidden="true">🇦🇺</span> Australia Day in Parramatta</h3><p class="muted small">26 January</p><p class="muted small">A day of free community entertainment, food and activities by the river.</p><span class="cta">Event details · Access plan · Booking <span aria-hidden="true">→</span></span></div></a></li>
+<li><a class="event-card" href="./plan/warami.html"><div class="event-card-top" style="background:#8fe3c2"><span class="tag">Free / First Nations</span><span class="price">Free</span></div><div class="event-card-body"><h3><span class="ev-emoji" aria-hidden="true">🎨</span> Warami</h3><p class="muted small">May – July</p><p class="muted small">A season of First Nations events on Dharug Country, including National Sorry Day programming.</p><span class="cta">Event details · Access plan · Booking <span aria-hidden="true">→</span></span></div></a></li>
+<li><a class="event-card" href="./plan/burramatta-naidoc.html"><div class="event-card-top" style="background:#c94c4c"><span class="tag">Free / First Nations</span><span class="price">Free</span></div><div class="event-card-body"><h3><span class="ev-emoji" aria-hidden="true">🌅</span> Burramatta NAIDOC</h3><p class="muted small">July</p><p class="muted small">A celebration of First Nations culture, music, art and community on Dharug Country.</p><span class="cta">Event details · Access plan · Booking <span aria-hidden="true">→</span></span></div></a></li>
+<li><a class="event-card" href="./plan/make-music-day.html"><div class="event-card-top" style="background:#cfc2f7"><span class="tag">Free / Music</span><span class="price">Free</span></div><div class="event-card-body"><h3><span class="ev-emoji" aria-hidden="true">🎸</span> Make Music Day</h3><p class="muted small">21 June</p><p class="muted small">Free live music in public spaces as part of the global Make Music Day.</p><span class="cta">Event details · Access plan · Booking <span aria-hidden="true">→</span></span></div></a></li>
+<li><a class="event-card" href="./plan/winterlight.html"><div class="event-card-top" style="background:#92a8d1"><span class="tag">Family / Culture</span><span class="price">$12</span></div><div class="event-card-body"><h3><span class="ev-emoji" aria-hidden="true">⛸️</span> Winterlight</h3><p class="muted small">July</p><p class="muted small">A winter festival with an outdoor ice rink, lights and family activities.</p><span class="cta">Event details · Access plan · Booking <span aria-hidden="true">→</span></span></div></a></li>
+<li><a class="event-card" href="./plan/farmers-market.html"><div class="event-card-top" style="background:#8fe3c2"><span class="tag">Free / Markets</span><span class="price">Free</span></div><div class="event-card-body"><h3><span class="ev-emoji" aria-hidden="true">🥕</span> Parramatta Farmers Market</h3><p class="muted small">Every Friday</p><p class="muted small">Fresh produce and street food from local growers and makers, every week.</p><span class="cta">Event details · Access plan · Booking <span aria-hidden="true">→</span></span></div></a></li>
+<li><a class="event-card" href="./plan/riverside-food-market.html"><div class="event-card-top" style="background:#8fe3c2"><span class="tag">Free / Food</span><span class="price">Free</span></div><div class="event-card-body"><h3><span class="ev-emoji" aria-hidden="true">🍜</span> Riverside Food Market</h3><p class="muted small">This weekend</p><p class="muted small">Food stalls and makers along the Parramatta River foreshore.</p><span class="cta">Event details · Access plan · Booking <span aria-hidden="true">→</span></span></div></a></li>
+<li><a class="event-card" href="./plan/family-movie-night.html"><div class="event-card-top" style="background:#ffc93c"><span class="tag">Free / Family</span><span class="price">Free</span></div><div class="event-card-body"><h3><span class="ev-emoji" aria-hidden="true">🎬</span> Family Movie Night</h3><p class="muted small">Select Saturdays</p><p class="muted small">Free outdoor family films on a big screen. Bring a blanket.</p><span class="cta">Event details · Access plan · Booking <span aria-hidden="true">→</span></span></div></a></li>
+<li><a class="event-card" href="./plan/seniors-festival.html"><div class="event-card-top" style="background:#cfc2f7"><span class="tag">Free / Culture</span><span class="price">Free</span></div><div class="event-card-body"><h3><span class="ev-emoji" aria-hidden="true">🌻</span> Seniors Festival</h3><p class="muted small">March</p><p class="muted small">A program of free events and activities celebrating older residents.</p><span class="cta">Event details · Access plan · Booking <span aria-hidden="true">→</span></span></div></a></li>
+<li><a class="event-card" href="./plan/youth-week.html"><div class="event-card-top" style="background:#cfc2f7"><span class="tag">Free / Music</span><span class="price">Free</span></div><div class="event-card-body"><h3><span class="ev-emoji" aria-hidden="true">🛹</span> Youth Week</h3><p class="muted small">April</p><p class="muted small">Events by and for young people, including music, art and workshops.</p><span class="cta">Event details · Access plan · Booking <span aria-hidden="true">→</span></span></div></a></li>
+    </ul>
+    <div id="no-results" class="empty" hidden>
+      <h3 style="font-size:1.25rem">No events match.</h3>
+      <p style="margin-top:0.25rem">Try a different search or pick another category.</p>
+      <button type="button" id="reset-empty" class="btn btn-accent" style="margin-top:1rem">Reset filters</button>
+    </div>
+  </section>
+
+  <section class="card-soft">
+    <div class="row"><h2 style="font-size:1.25rem">Built around what locals asked for</h2><button type="button" class="speak" hidden aria-pressed="false" data-label="Listen to this section" data-speak="Built around what locals asked for. The categories and event types here reflect what the community told the City of Parramatta it wants more of: free and family events, regular markets, riverside events, food, live music and cultural celebrations. See the About and data page for sources."><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Listen to this section</span></button></div>
+    <p class="muted" style="margin-top:0.5rem">The categories reflect what the community told the City of Parramatta it wants more of: free and family events, regular markets, riverside events, food, live music and cultural celebrations. Event details come from public Council listings — always confirm with the organiser.</p>
+  </section>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div aria-hidden="true" class="bunting "><span class="b-accent"></span><span class="b-sun"></span><span class="b-mint"></span><span class="b-lav"></span><span class="b-sky"></span><span class="b-brand"></span></div>
+  <div class="container footer-grid">
+    <div class="stack-sm">
+      <p style="font-family:var(--font-display);font-weight:700;font-size:1rem">Parramatta Explorer</p>
+      <p>A student prototype for the Build with AI Challenge. Independent — not affiliated with or endorsed by the City of Parramatta.</p>
+      <p>In an emergency call <strong>000</strong>.</p>
+    </div>
+    <div class="stack-sm">
+      <p>We acknowledge the Baramadagal clan of the Dharug Nation, the Traditional Owners of the land and waters of Parramatta, and pay respect to Elders past and present.</p>
+      <p>Event details are drawn from public City of Parramatta information and must be confirmed with the organiser. See <a class="link" href="./about.html">About &amp; data</a>.</p>
+    </div>
+  </div>
+</footer>
+<script src="./assets/js/data.js"></script>
+<script src="./assets/js/render.js"></script>
+<script src="./assets/js/core.js"></script>
+<script src="./assets/js/map.js"></script>
+<script src="./assets/js/explore.js"></script>
+</body>
+</html>

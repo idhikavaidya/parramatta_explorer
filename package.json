@@ -1,0 +1,17 @@
+{
+  "name": "parramatta-explorer-static",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plain HTML/CSS/JS version of Parramatta Explorer. No framework needed to run it.",
+  "scripts": {
+    "build": "node tools/build.mjs && node tools/contest.mjs",
+    "serve": "node tools/serve.mjs"
+  },
+  "devDependencies": {
+    "@fontsource/inter": "^5.2.0",
+    "@fontsource/opendyslexic": "^5.2.0",
+    "@fontsource/space-grotesk": "^5.2.0",
+    "esbuild": "^0.25.0",
+    "maplibre-gl": "^5.24.1"
+  }
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en-AU" data-root="./" data-theme="light" data-cb="none" data-text="base" data-motion="auto" data-font="default" data-ls="normal" data-lh="normal">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Report a problem · Parramatta Explorer</title>
+<meta name="description" content="Report an access problem at a Parramatta event and see what others have confirmed.">
+<meta name="theme-color" content="#034f84">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./assets/img/icon.svg" type="image/svg+xml">
+<link rel="icon" href="./favicon.ico" sizes="any">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var k={theme:'pe-theme',cb:'pe-cb',text:'pe-text',motion:'pe-motion',font:'pe-font',ls:'pe-ls',lh:'pe-lh'},f={theme:'light',cb:'none',text:'base',motion:'auto',font:'default',ls:'normal',lh:'normal'};for(var n in k){d.setAttribute('data-'+n,localStorage.getItem(k[n])||f[n]);}}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="net-banner" class="net-banner" role="status" hidden>You're offline. Pages you've already opened, and the offline schematic map, still work.</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./index.html">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="#92a8d1" stroke-width="1.6"/><path d="M16 8l-2.4 5.6L8 16l2.4-5.6z" fill="#FFC93C"/></svg>
+      <span>Parramatta Explorer</span>
+    </a>
+    <div class="header-actions">
+      <nav class="site-nav" aria-label="Primary"><ul><li><a href="./index.html">Explore</a></li><li><a href="./guide.html">How to use</a></li><li><a href="./report.html" aria-current="page">Report a problem</a></li><li><a href="./about.html">About &amp; data</a></li><li><a href="./settings.html">Settings</a></li></ul></nav>
+      <button type="button" class="speak" hidden aria-pressed="false" data-label="Read page"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Read page</span></button>
+      <a class="btn btn-sun btn-small" href="./signin.html">Sign in</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container">
+
+
+<header class="stack" style="margin-bottom:2rem">
+  <div class="row"><h1>Report a problem</h1><button type="button" class="speak" hidden aria-pressed="false" data-label="Listen"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Listen</span></button></div>
+  <p class="muted">Spot something wrong with an access feature? Report it in three steps. There is no moderator — other attendees confirm what is true, and abusive or private content is filtered automatically.</p>
+</header>
+<noscript><p class="notice">Reporting needs JavaScript.</p></noscript>
+<div class="stack-lg js-only">
+  <section class="stack">
+    <div class="row"><h2>Report a problem</h2><button type="button" class="speak" hidden aria-pressed="false" data-label="Listen to this section" data-speak="Report a problem. First choose the event, then the feature, then the type of issue. If none of the issue types fit, choose Other and describe it. You can add an optional note. Your report is shown to other attendees, who can confirm whether it is still there, being resolved, or resolved."><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Listen to this section</span></button></div>
+    <form id="r-form" class="card stack" novalidate>
+      <label class="field"><span>1. Which event?</span><select id="r-event"></select></label>
+      <label class="field"><span>2. Which feature?</span><select id="r-feature"></select></label>
+      <label class="field"><span>3. What is the issue?</span><select id="r-type"></select></label>
+      <label class="field" id="r-other-wrap" hidden><span>Describe the issue type</span><input type="text" id="r-other" maxlength="120"></label>
+      <label class="field"><span>Anything to add? (optional — please don't include personal information)</span><textarea id="r-note" rows="3" maxlength="240"></textarea></label>
+      <div><button type="submit" class="btn btn-primary">Submit report</button></div>
+      <p id="r-msg" role="status" class="notice" hidden></p>
+    </form>
+    <p class="muted small"><strong>Static version:</strong> reports are saved in this browser only. Sharing them between people needs a server (the Next.js app has one, with in-memory storage).</p>
+  </section>
+
+  <section class="stack">
+    <div class="row"><h2>Community status</h2><button type="button" class="speak" hidden aria-pressed="false" data-label="Listen to this section" data-speak="Community status. Every report is shown to everyone. Instead of a moderator deciding, other attendees vote whether an issue is still there, being resolved, or resolved. The most-voted status is shown. Each device gets one vote per report, which you can change. Anyone can also flag a report as inappropriate."><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Listen to this section</span></button></div>
+    <p class="muted">No moderator decides. Attendees confirm what is true right now — the community keeps the information honest. Each device gets one vote per report, and you can change it.</p>
+    <p id="flag-status" role="status" class="small semibold"></p>
+    <ul id="issue-list" class="issue-list"></ul>
+  </section>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div aria-hidden="true" class="bunting "><span class="b-accent"></span><span class="b-sun"></span><span class="b-mint"></span><span class="b-lav"></span><span class="b-sky"></span><span class="b-brand"></span></div>
+  <div class="container footer-grid">
+    <div class="stack-sm">
+      <p style="font-family:var(--font-display);font-weight:700;font-size:1rem">Parramatta Explorer</p>
+      <p>A student prototype for the Build with AI Challenge. Independent — not affiliated with or endorsed by the City of Parramatta.</p>
+      <p>In an emergency call <strong>000</strong>.</p>
+    </div>
+    <div class="stack-sm">
+      <p>We acknowledge the Baramadagal clan of the Dharug Nation, the Traditional Owners of the land and waters of Parramatta, and pay respect to Elders past and present.</p>
+      <p>Event details are drawn from public City of Parramatta information and must be confirmed with the organiser. See <a class="link" href="./about.html">About &amp; data</a>.</p>
+    </div>
+  </div>
+</footer>
+<script src="./assets/js/data.js"></script>
+<script src="./assets/js/render.js"></script>
+<script src="./assets/js/core.js"></script>
+<script src="./assets/js/store.js"></script>
+<script src="./assets/js/report.js"></script>
+</body>
+</html>

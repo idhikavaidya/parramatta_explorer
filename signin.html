@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-AU" data-root="./" data-theme="light" data-cb="none" data-text="base" data-motion="auto" data-font="default" data-ls="normal" data-lh="normal">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in · Parramatta Explorer</title>
+<meta name="description" content="Sign in as an attendee (no account) or a verified Council organiser.">
+<meta name="theme-color" content="#034f84">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./assets/img/icon.svg" type="image/svg+xml">
+<link rel="icon" href="./favicon.ico" sizes="any">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var k={theme:'pe-theme',cb:'pe-cb',text:'pe-text',motion:'pe-motion',font:'pe-font',ls:'pe-ls',lh:'pe-lh'},f={theme:'light',cb:'none',text:'base',motion:'auto',font:'default',ls:'normal',lh:'normal'};for(var n in k){d.setAttribute('data-'+n,localStorage.getItem(k[n])||f[n]);}}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="net-banner" class="net-banner" role="status" hidden>You're offline. Pages you've already opened, and the offline schematic map, still work.</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./index.html">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="#92a8d1" stroke-width="1.6"/><path d="M16 8l-2.4 5.6L8 16l2.4-5.6z" fill="#FFC93C"/></svg>
+      <span>Parramatta Explorer</span>
+    </a>
+    <div class="header-actions">
+      <nav class="site-nav" aria-label="Primary"><ul><li><a href="./index.html">Explore</a></li><li><a href="./guide.html">How to use</a></li><li><a href="./report.html">Report a problem</a></li><li><a href="./about.html">About &amp; data</a></li><li><a href="./settings.html">Settings</a></li></ul></nav>
+      <button type="button" class="speak" hidden aria-pressed="false" data-label="Read page"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Read page</span></button>
+      <a class="btn btn-sun btn-small" href="./signin.html">Sign in</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container">
+
+
+<header class="stack" style="margin-bottom:2rem">
+  <div class="row"><h1>Sign in</h1><button type="button" class="speak" hidden aria-pressed="false" data-label="Listen"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Listen</span></button></div>
+  <p class="muted">Attendees and organisers see different things. Attendees never need an account; organisers are verified so published access information can be trusted.</p>
+</header>
+<noscript><p class="notice">Sign-in needs JavaScript. Attendees don't need to sign in to use the rest of the site.</p></noscript>
+<div class="stack-lg">
+  <div id="si-saved" class="card row between" style="border-color:var(--brand)" hidden>
+    <p>Signed in as <strong id="si-saved-role"></strong>.</p>
+    <button type="button" id="si-signout" class="btn btn-outline btn-small">Sign out</button>
+  </div>
+  <p id="si-org-links" class="small" hidden>Organisers: open the workspace for an event, for example <a class="link" href="organiser/community-day.html">Parramatta Square Community Day</a>, or use the link on any event's access plan page.</p>
+
+  <section class="stack js-only">
+    <div class="row"><h2>Who are you?</h2><button type="button" class="speak" hidden aria-pressed="false" data-label="Listen to this section" data-speak="Who are you? Choose attendee to browse and plan events without an account. Choose Council organiser to build and verify an event&#39;s access plan. Organisers are verified because their email address or invite code proves they work for the council."><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Listen to this section</span></button></div>
+    <p class="muted">Attendees need no account. Organisers are verified because they publish official information.</p>
+    <div style="display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))">
+      <button type="button" id="si-choose-attendee" class="choice card" aria-pressed="false" style="border-width:2px;padding:1.25rem"><strong style="font-family:var(--font-display);font-size:1.125rem">I'm attending</strong><small style="font-size:0.875rem">Browse events, view access plans, report problems and leave feedback. No account, no personal details.</small></button>
+      <button type="button" id="si-choose-organiser" class="choice card" aria-pressed="false" style="border-width:2px;padding:1.25rem"><strong style="font-family:var(--font-display);font-size:1.125rem">I'm a Council organiser</strong><small style="font-size:0.875rem">Build, verify and publish an event's access plan.</small></button>
+    </div>
+  </section>
+
+  <section id="si-attendee" class="card stack" hidden>
+    <h2 style="font-size:1.125rem">Browse as an attendee</h2>
+    <p class="muted">We don't ask for your name, email or any health information. If you choose a need profile, it stays on your device and is never uploaded or stored on a server.</p>
+    <div><button type="button" id="si-continue" class="btn btn-primary">Continue without an account</button></div>
+  </section>
+
+  <section id="si-organiser" class="card stack" hidden>
+    <h2 style="font-size:1.125rem">Verify you work for Council</h2>
+    <p class="muted">We verify you the same way most workplaces do — no documents, no invasive checks. Use your <strong>@cityofparramatta.nsw.gov.au</strong> work email and we send a one-time link, or enter an invite code from your events team. If neither works, a Council admin can verify you manually. <strong>Demo only:</strong> no email is sent, and this check runs in your browser, so it protects nothing.</p>
+    <form id="si-form" class="stack" novalidate>
+      <label class="field"><span>Council work email</span><input type="email" id="si-email" placeholder="name@cityofparramatta.nsw.gov.au" autocomplete="off"></label>
+      <label class="field"><span>Or an invite code (demo: PARRA-2026)</span><input type="text" id="si-code" placeholder="Invite code" autocomplete="off"></label>
+      <div><button type="submit" class="btn btn-primary">Verify and sign in</button></div>
+    </form>
+  </section>
+
+  <p id="si-result" role="status" class="notice" hidden></p>
+  <p id="si-error" role="alert" class="notice notice-error" hidden></p>
+
+  <section class="stack-sm">
+    <h2 style="font-size:1.25rem">How your privacy is protected</h2>
+    <ul class="muted stack-sm" style="padding-left:1.25rem">
+      <li><strong>Attendees:</strong> no name, no email, no health or disability information is collected or stored. Any need profile you pick is kept only in your browser.</li>
+      <li><strong>Organisers:</strong> verified by a work-email link or invite code — we never ask for identity documents, and we don't store more than your verified role.</li>
+      <li>This is a prototype. See the <a class="link" href="about.html">About &amp; data</a> page for the full data approach.</li>
+    </ul>
+  </section>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div aria-hidden="true" class="bunting "><span class="b-accent"></span><span class="b-sun"></span><span class="b-mint"></span><span class="b-lav"></span><span class="b-sky"></span><span class="b-brand"></span></div>
+  <div class="container footer-grid">
+    <div class="stack-sm">
+      <p style="font-family:var(--font-display);font-weight:700;font-size:1rem">Parramatta Explorer</p>
+      <p>A student prototype for the Build with AI Challenge. Independent — not affiliated with or endorsed by the City of Parramatta.</p>
+      <p>In an emergency call <strong>000</strong>.</p>
+    </div>
+    <div class="stack-sm">
+      <p>We acknowledge the Baramadagal clan of the Dharug Nation, the Traditional Owners of the land and waters of Parramatta, and pay respect to Elders past and present.</p>
+      <p>Event details are drawn from public City of Parramatta information and must be confirmed with the organiser. See <a class="link" href="./about.html">About &amp; data</a>.</p>
+    </div>
+  </div>
+</footer>
+<script src="./assets/js/data.js"></script>
+<script src="./assets/js/render.js"></script>
+<script src="./assets/js/core.js"></script>
+<script src="./assets/js/signin.js"></script>
+</body>
+</html>

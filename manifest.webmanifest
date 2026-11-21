@@ -1,0 +1,23 @@
+{
+  "name": "Parramatta Explorer",
+  "short_name": "Parra Explorer",
+  "description": "Find what's on across Parramatta and plan events that work for everyone. Offline-ready event and access information.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#034f84",
+  "icons": [
+    {
+      "src": "assets/img/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

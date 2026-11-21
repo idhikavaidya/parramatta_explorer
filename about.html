@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-AU" data-root="./" data-theme="light" data-cb="none" data-text="base" data-motion="auto" data-font="default" data-ls="normal" data-lh="normal">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About &amp; data · Parramatta Explorer</title>
+<meta name="description" content="Data sources, offline behaviour, privacy and responsible-AI notes for Parramatta Explorer.">
+<meta name="theme-color" content="#034f84">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./assets/img/icon.svg" type="image/svg+xml">
+<link rel="icon" href="./favicon.ico" sizes="any">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var k={theme:'pe-theme',cb:'pe-cb',text:'pe-text',motion:'pe-motion',font:'pe-font',ls:'pe-ls',lh:'pe-lh'},f={theme:'light',cb:'none',text:'base',motion:'auto',font:'default',ls:'normal',lh:'normal'};for(var n in k){d.setAttribute('data-'+n,localStorage.getItem(k[n])||f[n]);}}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="net-banner" class="net-banner" role="status" hidden>You're offline. Pages you've already opened, and the offline schematic map, still work.</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./index.html">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="#92a8d1" stroke-width="1.6"/><path d="M16 8l-2.4 5.6L8 16l2.4-5.6z" fill="#FFC93C"/></svg>
+      <span>Parramatta Explorer</span>
+    </a>
+    <div class="header-actions">
+      <nav class="site-nav" aria-label="Primary"><ul><li><a href="./index.html">Explore</a></li><li><a href="./guide.html">How to use</a></li><li><a href="./report.html">Report a problem</a></li><li><a href="./about.html" aria-current="page">About &amp; data</a></li><li><a href="./settings.html">Settings</a></li></ul></nav>
+      <button type="button" class="speak" hidden aria-pressed="false" data-label="Read page"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Read page</span></button>
+      <a class="btn btn-sun btn-small" href="./signin.html">Sign in</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container">
+
+
+<header class="stack" style="margin-bottom:2rem">
+  <div class="row"><h1>About & data</h1><button type="button" class="speak" hidden aria-pressed="false" data-label="Listen"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Listen</span></button></div>
+  <p class="muted">How Parramatta Explorer works, where the data comes from, and how to add more. Full detail lives in the <code>docs/</code> folder of this project.</p>
+</header>
+<div class="stack-lg">
+  <p class="disclaimer"><strong>Prototype — illustrative data.</strong> This is a student prototype using clearly-labelled synthetic and public seed data. It is best-effort and community-verified, is <strong>not a substitute for official venue information</strong>, and is <strong>not endorsed, funded or procured by Council</strong>. In an emergency call 000.</p>
+
+  <section class="stack-sm">
+    <div class="row"><h2>Datasets used</h2><button type="button" class="speak" hidden aria-pressed="false" data-label="Listen to this section" data-speak="Datasets used. Event listings come from public City of Parramatta pages and the Major Events and Festivals Strategy 2025 to 2030. Map and venue geometry come from OpenStreetMap under ODbL. Transport stops come from Transport for NSW Open Data. Community reports are created by participants."><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Listen to this section</span></button></div>
+    <ul class="muted small stack-sm" style="padding-left:1.25rem">
+      <li><strong>Event listings</strong> — public City of Parramatta event pages and the Major Events and Festivals Strategy 2025–2030. Attribution required.</li>
+      <li><strong>Venue and map geometry</strong> — OpenStreetMap, licensed ODbL. Attribution required.</li>
+      <li><strong>Transport</strong> — Transport for NSW Open Data (stops, wheelchair boarding).</li>
+      <li><strong>Access features</strong> — Council records where available; otherwise clearly marked as “requires confirmation”.</li>
+      <li><strong>Community reports</strong> — created by participants; confirmed by other attendees rather than a moderator.</li>
+    </ul>
+    <p class="muted small">Every fact carries a source, a last-verified date and a status. Nothing is shown as fact unless a person has verified it. The “verified N days ago” figures in this prototype are example values counted from the moment you load a page.</p>
+  </section>
+
+  <section class="stack-sm">
+    <div class="row"><h2>How to add map data</h2><button type="button" class="speak" hidden aria-pressed="false" data-label="Listen to this section" data-speak="How to add map data. Add a venue with its latitude and longitude. Add each access feature with its own coordinates, the needs it serves, and attributes with a source and a verification status. Then rebuild the static site so the pages update."><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Listen to this section</span></button></div>
+    <ol class="muted small stack-sm" style="padding-left:1.25rem">
+      <li>Add the venue to <code>src/lib/data/seed.ts</code> with a name, address and <code>geo</code> latitude/longitude.</li>
+      <li>Add each access feature with its own <code>geo</code>, the <code>needs</code> it serves, and <code>attributes</code> — each with a <code>source</code> and a <code>status</code> (verified, requires confirmation, or missing).</li>
+      <li>Run <code>npm run build</code> inside <code>static-site/</code> to regenerate this site from that data.</li>
+      <li>Keep the plain-text list in sync so every map has a non-visual equivalent (the build does this for you).</li>
+    </ol>
+  </section>
+
+  <section class="stack-sm">
+    <h2 style="font-size:1.25rem">Working offline</h2>
+    <p class="muted small">After your first visit over <code>https://</code> (or <code>localhost</code>), a service worker stores every page, the scripts, fonts and map library on your device, so the whole site opens with no signal. “Save this plan for offline” also stores map tiles around the venue. Where tiles aren't stored, the app shows the offline schematic map, and every map has a text list of the same information.</p>
+  </section>
+
+  <section class="stack-sm">
+    <h2 style="font-size:1.25rem">Where your information is stored</h2>
+    <p class="muted small">This static version has no server. Your display settings, need selections, reports, votes and ratings are kept in this browser's local storage and are not sent anywhere. That also means reports are not shared between people. A shared community board needs a backend (the Next.js app in this project has the API routes for it, backed by in-memory storage that resets on restart).</p>
+  </section>
+
+  <section class="stack-sm">
+    <h2 style="font-size:1.25rem">Responsible AI</h2>
+    <p class="muted small">AI helps turn messy text into structured access attributes, retrieve requirements from approved Council documents, and draft a risk register. Every AI output is labelled <strong>“AI-suggested — requires human confirmation”</strong> and cannot be published without an approver recorded. AI never makes a consequential decision autonomously, and any output can be removed, corrected, suspended and reviewed. In this prototype the AI step is a fixed stand-in, not a live model.</p>
+  </section>
+
+  <section class="stack-sm">
+    <h2 style="font-size:1.25rem">Privacy</h2>
+    <ul class="muted small stack-sm" style="padding-left:1.25rem">
+      <li><strong>Attendees:</strong> no name, email, health or disability information is collected. Any need profile stays in your browser.</li>
+      <li><strong>Organisers:</strong> verified by a work-email link or invite code — no identity documents.</li>
+      <li><strong>Reports:</strong> notes are screened to remove personal information and abusive language before they appear.</li>
+    </ul>
+  </section>
+
+  <section class="stack-sm">
+    <h2 style="font-size:1.25rem">Council boundary</h2>
+    <p class="muted small"><strong>Partner:</strong> Council hosts the readiness workflow and owns verified data. <strong>Facilitate:</strong> distribute the plan through existing event channels. <strong>Advocate:</strong> for access conditions Council does not control (station lifts, private venues), the tool produces an advocacy brief for the relevant operator.</p>
+  </section>
+
+  <p class="small"><a class="link" href="index.html">← Back to explore</a></p>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div aria-hidden="true" class="bunting "><span class="b-accent"></span><span class="b-sun"></span><span class="b-mint"></span><span class="b-lav"></span><span class="b-sky"></span><span class="b-brand"></span></div>
+  <div class="container footer-grid">
+    <div class="stack-sm">
+      <p style="font-family:var(--font-display);font-weight:700;font-size:1rem">Parramatta Explorer</p>
+      <p>A student prototype for the Build with AI Challenge. Independent — not affiliated with or endorsed by the City of Parramatta.</p>
+      <p>In an emergency call <strong>000</strong>.</p>
+    </div>
+    <div class="stack-sm">
+      <p>We acknowledge the Baramadagal clan of the Dharug Nation, the Traditional Owners of the land and waters of Parramatta, and pay respect to Elders past and present.</p>
+      <p>Event details are drawn from public City of Parramatta information and must be confirmed with the organiser. See <a class="link" href="./about.html">About &amp; data</a>.</p>
+    </div>
+  </div>
+</footer>
+<script src="./assets/js/data.js"></script>
+<script src="./assets/js/render.js"></script>
+<script src="./assets/js/core.js"></script>
+</body>
+</html>
